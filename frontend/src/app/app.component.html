@@ -15,7 +15,7 @@
         <article class="panel">
             <header>Overview</header>
             <div class="card-grid">
-                <app-stat-card label="Followers" [value]="userData.followers_count"></app-stat-card>
+                <app-stat-card label="Followers" [value]="userData.followers_count === 0 ? 'No followers yet' : userData.followers_count"></app-stat-card>
                 <app-stat-card label="Most used technology" [value]="userData.most_used_language"></app-stat-card>
             </div>
         </article>
