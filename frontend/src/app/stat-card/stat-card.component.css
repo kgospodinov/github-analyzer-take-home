@@ -1,0 +1,19 @@
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin: 0;
+    min-width: 10rem;
+}
+
+.stat-card__label {
+    font-size: 0.75rem;
+    color: var(--pico-muted-color);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.stat-card__value {
+    font-size: 1.25rem;
+    font-weight: 600;
+}

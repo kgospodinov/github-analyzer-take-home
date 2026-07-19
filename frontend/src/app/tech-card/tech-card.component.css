@@ -1,0 +1,9 @@
+.tech-pill {
+    display: inline-block;
+    padding: 0.3rem 0.75rem;
+    border: 1px solid var(--pico-muted-border-color);
+    border-radius: var(--pico-border-radius);
+    background: var(--pico-card-background-color);
+    color: var(--pico-color);
+    font-size: 0.85rem;
+}

@@ -1,0 +1,19 @@
+[project]
+name = "github-analyzer"
+version = "0.0.1"
+description = "Take-home task for Hedgeserve"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.139.2",
+    "requests>=2.34.2",
+    "uvicorn>=0.51.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

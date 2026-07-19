@@ -1,0 +1,18 @@
+.repo-card {
+    margin: 0;
+    min-width: 10rem;
+}
+
+.repo-card h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    border-radius: var(--pico-border-radius);
+    background: var(--pico-muted-border-color);
+    color: var(--pico-color);
+    font-size: 0.75rem;
+}

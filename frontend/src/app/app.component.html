@@ -1,0 +1,47 @@
+<main class="container">
+    <h1>Github Analyzer</h1>
+
+  <fieldset role="group" [disabled]="loading()">
+    <input [(ngModel)]="githubUsername"
+        placeholder="Enter GitHub username"
+        (keyup.enter)="search()" />
+    <input type="button" [value]="loading() ? 'Searching…' : 'Search'" (click)="search()" />
+  </fieldset>
+  <div *ngIf="loading()" aria-busy="true">Loading…</div>
+
+  <div class="error-banner" *ngIf="error()">{{ error() }}</div>
+
+    <div *ngIf="data() as userData">
+        <article class="panel">
+            <header>Overview</header>
+            <div class="card-grid">
+                <app-stat-card label="Followers" [value]="userData.followers_count"></app-stat-card>
+                <app-stat-card label="Most used technology" [value]="userData.most_used_language"></app-stat-card>
+            </div>
+        </article>
+
+        <article class="panel">
+            <header>Technologies used</header>
+            <div class="card-grid" *ngIf="userData.technologies?.length; else noTech">
+                <app-tech-card *ngFor="let tech of userData.technologies" [tech]="tech"></app-tech-card>
+            </div>
+            <ng-template #noTech>
+                <p class="empty-message">No technologies found.</p>
+            </ng-template>
+        </article>
+
+        <article class="panel">
+            <header>Repositories</header>
+            <div class="card-grid" *ngIf="userData.repos?.length; else noRepos">
+                <app-repo-card
+                    *ngFor="let repo of userData.repos"
+                    [name]="repo.name"
+                    [language]="repo.language"
+                ></app-repo-card>
+            </div>
+            <ng-template #noRepos>
+                <p class="empty-message">No repositories found.</p>
+            </ng-template>
+        </article>
+    </div>
+</main>
