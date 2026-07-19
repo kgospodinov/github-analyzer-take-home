@@ -37,6 +37,12 @@ npm install
 ng serve
 ```
 
-### Notes
+### Docker
 
-The GitHub API is rate-limited to 60 requests/hour without authentication.
+Run both services with Docker Compose from the repo root:
+
+```commandline
+docker compose up
+```
+
+The backend is available at `http://localhost:8000` and the frontend at `http://localhost:4200`.
