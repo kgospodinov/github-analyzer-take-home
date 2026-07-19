@@ -34,7 +34,7 @@ Run from the `frontend/` folder.
 
 ```commandline
 npm install
-ng serve
+npm start
 ```
 
 ### Docker
