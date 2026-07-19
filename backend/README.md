@@ -28,9 +28,9 @@ The API is available at `http://localhost:8000`.
 uv run pytest
 ```
 
-Or with pip (after activating the venv above):
+Or with pip: 
 
 ```bash
-pip install pytest httpx
+pip install -r requirements-dev.txt
 pytest
 ```
